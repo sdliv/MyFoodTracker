@@ -24,25 +24,47 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t3U-wA-mUp" id="fiv-F3-hHk">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="89"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Qm6-9n-juo">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Qm6-9n-juo">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="90" id="nIa-9e-PXz"/>
+                                                <constraint firstAttribute="height" constant="90" id="yMW-if-P3O"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRv-Op-Ste">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wRv-Op-Ste">
                                             <rect key="frame" x="98" y="8" width="269" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="269" id="l4l-qi-Let"/>
+                                                <constraint firstAttribute="height" constant="21" id="pHa-lU-inI"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E1L-OL-Its" customClass="RatingControl" customModule="MyFoodTracker" customModuleProvider="target">
+                                        <stackView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="E1L-OL-Its" customClass="RatingControl" customModule="MyFoodTracker" customModuleProvider="target">
                                             <rect key="frame" x="98" y="37" width="252" height="44"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="44" id="Wi3-2g-MOt"/>
+                                                <constraint firstAttribute="width" constant="252" id="nho-gh-KAQ"/>
+                                            </constraints>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="wRv-Op-Ste" firstAttribute="trailing" secondItem="fiv-F3-hHk" secondAttribute="trailingMargin" id="Gvh-ij-qv3"/>
+                                        <constraint firstItem="wRv-Op-Ste" firstAttribute="top" secondItem="fiv-F3-hHk" secondAttribute="topMargin" id="OVA-uR-5qt"/>
+                                        <constraint firstItem="Qm6-9n-juo" firstAttribute="leading" secondItem="fiv-F3-hHk" secondAttribute="leading" id="PiQ-7K-qh9"/>
+                                        <constraint firstItem="E1L-OL-Its" firstAttribute="leading" secondItem="Qm6-9n-juo" secondAttribute="trailing" constant="8" id="RpQ-dO-FcL"/>
+                                        <constraint firstItem="E1L-OL-Its" firstAttribute="bottom" secondItem="fiv-F3-hHk" secondAttribute="bottomMargin" id="Tgi-L3-2Kl"/>
+                                        <constraint firstItem="E1L-OL-Its" firstAttribute="leading" secondItem="Qm6-9n-juo" secondAttribute="trailing" constant="8" id="UI5-wA-T6Q"/>
+                                        <constraint firstItem="Qm6-9n-juo" firstAttribute="top" secondItem="fiv-F3-hHk" secondAttribute="top" id="VKC-5X-9Tq"/>
+                                        <constraint firstItem="wRv-Op-Ste" firstAttribute="leading" secondItem="Qm6-9n-juo" secondAttribute="trailing" constant="8" id="Xb4-Er-9QD"/>
+                                        <constraint firstItem="E1L-OL-Its" firstAttribute="top" secondItem="wRv-Op-Ste" secondAttribute="bottom" constant="8" id="azW-gC-cXD"/>
+                                        <constraint firstAttribute="bottom" secondItem="Qm6-9n-juo" secondAttribute="bottom" constant="-1" id="lrC-qO-rrI"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="E1L-OL-Its" secondAttribute="trailing" constant="17" id="ttx-uu-5Br"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="mealNameLabel" destination="wRv-Op-Ste" id="DtW-34-Zap"/>
@@ -187,6 +209,6 @@
         <image name="defaultPhoto" width="745" height="540"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ofx-BS-0b8"/>
+        <segue reference="vv1-fg-gb6"/>
     </inferredMetricsTieBreakers>
 </document>
